@@ -455,7 +455,7 @@ export default function LandingPage() {
           <DesktopNavLink href="#features">Features</DesktopNavLink>
           <DesktopNavLink href="#file-format">File Format</DesktopNavLink>
           <DesktopNavLink href="#faq">FAQ</DesktopNavLink>
-          <DesktopNavLink href="#">
+          <DesktopNavLink href="https://github.com/evanspj/expense-drop">
             Github{' '}
             <span className="ml-2">
               <svg
@@ -762,7 +762,10 @@ export default function LandingPage() {
           </a>
         </p>
         <span>|</span>
-        <a href="" className="underline cursor-pointer">
+        <a
+          href="https://github.com/evanspj/expense-drop/blob/main/LICENSE"
+          className="underline cursor-pointer"
+        >
           MIT License
         </a>
       </footer>
