@@ -433,7 +433,7 @@ export default function LandingPage() {
     fetchSessions();
     if (process.env.NODE_ENV === 'production') {
       Fathom.load(process.env.NEXT_PUBLIC_FATHOM_SITE_ID, {
-        includedDomains: ['expense-drop.evanspj.com']
+        includedDomains: ['expense-drop.vercel.app']
       });
     }
   }, []);
