@@ -12,7 +12,8 @@
     "expenses",
     "xlsx",
     "framer-motion",
-    "visx"
+    "visx",
+    "vercel"
   ],
   "license": "MIT",
   "repository": {
