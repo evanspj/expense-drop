@@ -1,0 +1,79 @@
+{
+  "name": "expense-drop",
+  "description": "A privacy-focused way to review your expenses. All file processing and data stays in your browser. No data is stored on a server. Your important financial data should be for your eyes only.",
+  "author": "Patrick Evans <evanspj.dev@gmail.com>",
+  "version": "0.1.0",
+  "private": true,
+  "keywords": [
+    "react",
+    "nextjs",
+    "tailwindcss",
+    "finance",
+    "expenses",
+    "xlsx",
+    "framer-motion",
+    "visx"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evanspj/expense-drop"
+  },
+  "bugs": {
+    "url": "https://github.com/evanspj/expense-drop"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "analyze": "ANALYZE=true yarn build"
+  },
+  "dependencies": {
+    "@floating-ui/react-dom": "^0.6.0",
+    "@headlessui/react": "^1.4.2",
+    "@tippyjs/react": "^4.2.6",
+    "@visx/axis": "^2.4.0",
+    "@visx/curve": "^2.1.0",
+    "@visx/event": "^2.1.2",
+    "@visx/gradient": "^2.1.0",
+    "@visx/grid": "^2.4.0",
+    "@visx/group": "^2.1.0",
+    "@visx/legend": "^2.2.2",
+    "@visx/responsive": "^2.4.1",
+    "@visx/scale": "^2.2.2",
+    "@visx/shape": "^2.4.0",
+    "@visx/tooltip": "^2.2.2",
+    "autoprefixer": "^10.4.0",
+    "classnames": "^2.3.1",
+    "crypto-js": "^4.1.1",
+    "d3-ease": "^3.0.1",
+    "dayjs": "^1.10.8",
+    "dexie": "^3.2.0",
+    "fathom-client": "^3.4.1",
+    "framer-motion": "^5.5.5",
+    "nanoid": "^3.1.30",
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "17.0.2",
+    "react-dropzone": "^11.4.2",
+    "react-form": "^4.0.1",
+    "react-hot-toast": "^2.2.0",
+    "react-use": "^17.3.1",
+    "tailwindcss": "^3.0.7",
+    "valtio": "^1.2.7",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^12.1.4",
+    "eslint": "8.5.0",
+    "eslint-config-next": "12.0.7",
+    "prettier": "^2.6.2"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "none"
+  }
+}
