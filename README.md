@@ -1,3 +1,5 @@
+![github_preview_2-optimized](https://user-images.githubusercontent.com/8595624/163850265-5decd7b5-c57c-4b3e-982c-bb3eab73491f.png)
+
 # Expense Drop
 
 A privacy-focused way to review your expenses. All file processing and data stays in your browser. No data is stored on a server. Your important financial data should be for your eyes only.
@@ -17,7 +19,7 @@ A privacy-focused way to review your expenses. All file processing and data stay
 
 For the app to work correctly, there is a specific format that is required for the excel file. The app expects the first row of the file to contain the headers for each column. The order of the columns does not matter, but the app will pull data from the headers **date**, **description**, **account**, **category**, and **amount** columns. Any other columns you have in your file will be ignored. An error will be displayed if you try to upload a file with them missing. **Column headers need to be capitalized**.
 
-`**NOTE**` Though these headers are not required, if either the "Account" or "Category" value is left blank, it will affect how the data is presented. Ideally, you want to make sure all cell values are filled in.
+`NOTE` Though these headers are not required, if either the "Account" or "Category" value is left blank, it will affect how the data is presented. Ideally, you want to make sure all cell values are filled in.
 
 ## FAQ
 
