@@ -29,7 +29,7 @@ class MyDocument extends Document {
           <meta content="A privacy-focused way to review your expenses." />
           <meta property="og:url" content="https://expense-drop.vercel.app/" />
           <meta property="og:type" content="website" />
-          <meta property="og:site_name" content="expense drop" />
+          <meta property="og:site_name" content="Expense Drop" />
           <meta
             property="og:description"
             content="A privacy-focused way to review your expenses. All file processing and data stays in your browser. No data is stored on a server. Your important financial data should be for your eyes only."
