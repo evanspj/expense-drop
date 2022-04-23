@@ -413,11 +413,9 @@ export default function LandingPage() {
   }
 
   async function startDemo() {
-    console.log('triggered');
     const data = await import('@data/demo-data.json').then(
       (module) => module.data
     );
-    console.log(data.map((t, i) => ({ ...t, __rowNum__: i })));
     state.transactions = data.map((t, i) => ({ ...t, __rowNum__: i }));
   }
 
