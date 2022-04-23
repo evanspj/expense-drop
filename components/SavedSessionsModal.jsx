@@ -233,7 +233,7 @@ export default function SavedSessions({
               multipleSessions={itemsToDelete.length > 1}
               deleteSessions={deleteSessions}
               showDeleteModal={showDeleteModal}
-              closeDeleteModal={closeDeleteModal}
+              hideDeleteModal={closeDeleteModal}
             />
           </Dialog>
         )}
