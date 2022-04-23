@@ -530,6 +530,7 @@ export default function LandingPage() {
               className="z-10 leading-none rounded-xl"
               src={appPreviewImage}
               placeholder="blur"
+              alt="Expense Drop App Preview"
             />
           </div>
           <ul className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20 lg:px-8 mt-16 lg:mt-32">
@@ -584,6 +585,7 @@ export default function LandingPage() {
               className="z-10 leading-none rounded-xl"
               src={transactionsPreviewImage}
               placeholder="blur"
+              alt="Transactions Page Preview"
             />
           </div>
           <div>
