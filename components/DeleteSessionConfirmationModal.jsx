@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { overlayVariants, modalVariants } from '@utils/animations';
@@ -8,7 +9,10 @@ export default function DeleteSessionsConfirmationModal({
   showDeleteModal,
   hideDeleteModal
 }) {
+  const [deleting, setDeleting] = useState(false);
+
   function confirmDelete() {
+    setDeleting(true);
     deleteSessions();
     hideDeleteModal();
   }
@@ -55,6 +59,7 @@ export default function DeleteSessionsConfirmationModal({
                 <button
                   className="w-full h-14 bg-gray-800 text-xs 3xl:text-sm font-medium text-white hover:bg-gray-700 rounded-br-lg"
                   onClick={confirmDelete}
+                  disabled={deleting}
                 >
                   Confirm Delete
                 </button>

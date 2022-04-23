@@ -8,13 +8,16 @@ import { useSnapshot } from 'valtio';
 export default function DownloadModal() {
   const { downloadModal, transactions, session } = useSnapshot(state);
   const [fileName, setFileName] = useState(session?.sessionName || 'Expenses');
+  const [downloading, setDownloading] = useState(false);
 
   async function closeModal() {
     state.downloadModal = false;
     setFileName(session?.sessionName || 'Expenses');
+    setDownloading(false);
   }
 
   async function downloadFile() {
+    setDownloading(true);
     const XLSX = (await import('@utils/sheetjs')).default;
     const workbook = XLSX.utils.book_new();
     const worksheet = XLSX.utils.json_to_sheet(
@@ -85,6 +88,7 @@ export default function DownloadModal() {
                 <button
                   className="w-full h-14 bg-gray-800 text-xs 3xl:text-sm font-medium text-white hover:bg-gray-700 rounded-br-lg"
                   onClick={downloadFile}
+                  disabled={downloading}
                 >
                   Download
                 </button>

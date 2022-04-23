@@ -118,6 +118,7 @@ export default function ExpenseEditModal() {
                 <button
                   className="w-full h-14 bg-gray-800 text-xs 3xl:text-sm font-medium text-white hover:bg-gray-700 rounded-br-lg"
                   type="submit"
+                  disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Saving...' : 'Save'}
                 </button>

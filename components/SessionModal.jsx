@@ -9,6 +9,7 @@ import { sortDateDesc, encryptData } from '@utils/helpers';
 
 export default function SessionModal() {
   const { sessionModal, transactions, session } = useSnapshot(state);
+  const [savingData, setSavingData] = useState(false);
   const [sessionName, setSessionName] = useState(
     new Intl.DateTimeFormat('en-US').format(new Date())
   );
@@ -24,6 +25,7 @@ export default function SessionModal() {
 
   async function saveSession(e) {
     e.preventDefault();
+    setSavingData(true);
     const sortedTransactions = transactions
       .map((t) => ({ ...t }))
       .sort(sortDateDesc);
@@ -97,6 +99,7 @@ export default function SessionModal() {
 
   async function update(e) {
     e.preventDefault();
+    setSavingData(true);
     updateSession({
       transactions,
       session,
@@ -161,6 +164,7 @@ export default function SessionModal() {
                 <button
                   className="w-full h-14 bg-gray-800 text-xs 3xl:text-sm font-medium text-white hover:bg-gray-700 rounded-br-lg"
                   onClick={(e) => (session ? update(e) : saveSession(e))}
+                  disabled={savingData}
                 >
                   {session ? 'Update' : 'Save'}
                 </button>

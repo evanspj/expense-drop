@@ -30,6 +30,7 @@ export default function BulkEditModal({ callback }) {
       []
     ),
     onSubmit: async (values) => {
+      if (!selectedTransactions || !selectedTransactions.length) return;
       const filteredTransactions = [];
 
       transactions.forEach((t) => {
@@ -42,21 +43,27 @@ export default function BulkEditModal({ callback }) {
         const selectedTransaction = formatArray(transactions).filter(
           (t) => t.__rowNum__ == id
         )[0];
+
         if (values.description) {
           selectedTransaction.Description = values.description;
         }
+
         if (values.amount) {
           selectedTransaction.Amount = values.amount;
         }
+
         if (values.account) {
           selectedTransaction.Account = values.account;
         }
+
         if (values.category) {
           selectedTransaction.Category = values.category;
         }
+
         if (values.date) {
           selectedTransaction.Date = values.date;
         }
+
         return selectedTransaction;
       });
 
@@ -128,6 +135,7 @@ export default function BulkEditModal({ callback }) {
                 <button
                   className="w-full h-14 bg-gray-800 text-xs 3xl:text-sm font-medium text-white hover:bg-gray-700 rounded-br-lg"
                   type="submit"
+                  disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Saving...' : 'Save'}
                 </button>
