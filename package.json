@@ -62,7 +62,7 @@
     "react-use": "^17.3.1",
     "tailwindcss": "^3.0.7",
     "valtio": "^1.2.7",
-    "xlsx": "^0.18.5"
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.19.3/xlsx-0.19.3.tgz"
   },
   "devDependencies": {
     "eslint": "8.5.0",
