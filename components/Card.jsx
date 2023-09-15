@@ -68,10 +68,8 @@ export default function Card({
 
   if (link) {
     return (
-      <Link href={link}>
-        <a className="w-full block focus:outline-none border border-gray-200 hover:border-black rounded-xl">
-          <CardContent />
-        </a>
+      <Link href={link} className="w-full block focus:outline-none border border-gray-200 hover:border-black rounded-xl">
+        <CardContent />
       </Link>
     );
   }

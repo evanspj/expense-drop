@@ -17,10 +17,8 @@ function AccountLabel({ page, name }) {
       </p>
     );
   return (
-    <Link href={`/app/accounts/${nameToSlug(name)}`}>
-      <a className="w-full flex items-center justify-end xl:justify-start xl:col-span-2 text-xs xl:text-sm text-right xl:text-left text-gray-400 xl:text-gray-800 truncate hover:underline hover:text-indigo-500 outline-indigo-600 xl:pl-4">
-        {name}
-      </a>
+    <Link href={`/app/accounts/${nameToSlug(name)}`} className="w-full flex items-center justify-end xl:justify-start xl:col-span-2 text-xs xl:text-sm text-right xl:text-left text-gray-400 xl:text-gray-800 truncate hover:underline hover:text-indigo-500 outline-indigo-600 xl:pl-4">
+      {name}
     </Link>
   );
 }
@@ -31,10 +29,8 @@ function CategoryLabel({ page, name }) {
       <span className="bg-gray-200 text-xs rounded-md px-2 py-1 ">{name}</span>
     );
   return (
-    <Link href={`/app/categories/${nameToSlug(name)}`}>
-      <a className="bg-gray-200 text-xs rounded-md hover:bg-gray-800 hover:text-white  px-2 py-1">
+    <Link href={`/app/categories/${nameToSlug(name)}`} className="bg-gray-200 text-xs rounded-md hover:bg-gray-800 hover:text-white  px-2 py-1">
         {name}
-      </a>
     </Link>
   );
 }

@@ -95,8 +95,7 @@ export default function NavMenu() {
                               active ? 'bg-black text-white' : 'text-black'
                             } flex rounded-md items-center w-full px-2 py-2 text-xs 3xl:text-sm cursor-pointer`}
                           >
-                            <Link href="/app/transactions">
-                              <a className="w-full h-full flex items-center">
+                            <Link href="/app/transactions" className="w-full h-full flex items-center">
                                 <svg
                                   className="mr-2"
                                   width="15"
@@ -118,7 +117,6 @@ export default function NavMenu() {
                                   ></path>
                                 </svg>
                                 All Transactions
-                              </a>
                             </Link>
                           </div>
                         )}

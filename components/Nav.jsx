@@ -14,8 +14,7 @@ export default function Nav() {
           {router.pathname !== '/app' ? (
             <div className="flex items-center">
               <Tooltip label="Back to Dashboard" dark>
-                <Link href="/app">
-                  <a className="bg-white border border-gray-200 hover:bg-black hover:text-white rounded-md p-2">
+                <Link href="/app" className="bg-white border border-gray-200 hover:bg-black hover:text-white rounded-md p-2">
                     <svg
                       width="15"
                       height="15"
@@ -30,7 +29,6 @@ export default function Nav() {
                         clipRule="evenodd"
                       ></path>
                     </svg>
-                  </a>
                 </Link>
               </Tooltip>
             </div>
