@@ -1,6 +1,3 @@
-> [!Warning]
-> This project is being archived due to the lack of time to maintain it. Dependencies need to be updated if you want to fork and use yourself.
-
 ![github_preview_2-optimized](https://user-images.githubusercontent.com/8595624/163850265-5decd7b5-c57c-4b3e-982c-bb3eab73491f.png)
 
 # Expense Drop
