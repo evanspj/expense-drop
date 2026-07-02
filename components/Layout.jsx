@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
-import { state } from '../store';
+import { state } from '@store';
 import { useSnapshot } from 'valtio';
-import getConfig from 'next/config';
-const { publicRuntimeConfig } = getConfig();
 
 import Nav from './Nav';
 const SessionModal = dynamic(() => import('./SessionModal'));
@@ -37,7 +35,7 @@ export default function Layout({ children }) {
       <AddTransactionsModal />
       <ExpenseEditModal />
       <DownloadModal />
-      {publicRuntimeConfig.isDev && <TailwindBreakpointIndicator />}
+      {process.env.isDev && <TailwindBreakpointIndicator />}
     </main>
   );
 }

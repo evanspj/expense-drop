@@ -1,4 +1,4 @@
-const ease = [0.175, 0.85, 0.42, 0.96];
+export const ease = [0.175, 0.85, 0.42, 0.96];
 
 export const overlayVariants = {
   hidden: { opacity: 0, transition: { duration: 0.1 } },

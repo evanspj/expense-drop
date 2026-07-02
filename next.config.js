@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   swcMinify: true,
-  publicRuntimeConfig: {
+  env: {
     isDev: process.argv.includes('dev')
   },
   async redirects () {
