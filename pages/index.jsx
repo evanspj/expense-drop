@@ -7,7 +7,6 @@ import { ease } from '@utils/animations';
 import { Disclosure, Popover } from '@headlessui/react';
 import { db, state } from '@store';
 import { useSnapshot } from 'valtio';
-import * as Fathom from 'fathom-client';
 
 import appPreviewImage from '@images/expense_drop_preview-optimized.png';
 import transactionsPreviewImage from '@images/transactions_preview-optimized.png';
@@ -484,15 +483,6 @@ export default function LandingPage() {
   function closeSavedSessionModal() {
     setIsSavedSessionsOpen(false);
   }
-
-  useEffect(() => {
-    fetchSessions();
-    if (process.env.NODE_ENV === 'production') {
-      Fathom.load(process.env.NEXT_PUBLIC_FATHOM_SITE_ID, {
-        includedDomains: ['expense-drop.vercel.app']
-      });
-    }
-  }, []);
 
   useEffect(() => {
     if (transactions?.length) {

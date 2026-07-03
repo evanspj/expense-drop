@@ -50,7 +50,6 @@
     "d3-ease": "^3.0.1",
     "dayjs": "^1.11.9",
     "dexie": "^3.2.4",
-    "fathom-client": "^3.5.0",
     "framer-motion": "^10.16.4",
     "nanoid": "^5.0.1",
     "next": "16.2.6",
