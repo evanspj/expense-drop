@@ -12,6 +12,8 @@ const ExpenseEditModal = dynamic(() => import('./ExpenseEditModal'));
 const DownloadModal = dynamic(() => import('./DownloadModal'));
 import TailwindBreakpointIndicator from '@components/TailwindBreakpointIndicator';
 
+const isDev = process.env.NODE_ENV === 'development';
+
 export default function Layout({ children }) {
   const router = useRouter();
   const { transactions } = useSnapshot(state);
@@ -35,7 +37,7 @@ export default function Layout({ children }) {
       <AddTransactionsModal />
       <ExpenseEditModal />
       <DownloadModal />
-      {process.env.isDev && <TailwindBreakpointIndicator />}
+      {isDev && <TailwindBreakpointIndicator />}
     </main>
   );
 }
