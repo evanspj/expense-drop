@@ -88,7 +88,7 @@ export default function BarChart({
   );
 
   return width < 10 ? null : (
-    <div className="relative">
+    <div className='relative'>
       <svg ref={containerRef} width={width} height={height}>
         <Group top={5} left={isMobile ? 0 : 70}>
           <GridRows scale={yScale} width={xMax} height={yMax} />
@@ -102,7 +102,7 @@ export default function BarChart({
               tickFormat={formatNumber}
             />
           )}
-          <LinearGradient id="bar-bg" from="#6366F1" to="#8B5CF6" />
+          <LinearGradient id='bar-bg' from='#6366F1' to='#8B5CF6' />
           {data.map((d) => {
             const xLabel = getX(d);
             const barWidth = xScale.bandwidth();
@@ -111,12 +111,12 @@ export default function BarChart({
             const barY = yMax - barHeight;
             return (
               <motion.rect
-                className="rounded-t-lg"
+                className='rounded-t-lg'
                 key={`bar-${xLabel}`}
                 initial={{ opacity: 0, y: barHeight }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
-                fill="url(#bar-bg)"
+                fill='url(#bar-bg)'
                 x={barX}
                 y={barY}
                 width={barWidth}
@@ -149,16 +149,16 @@ export default function BarChart({
           left={tooltipLeft}
           style={tooltipStyles}
         >
-          <div className="text-xs mb-1">
+          <div className='text-xs mb-1'>
             <strong>{tooltipData.x}</strong>
           </div>
           <div>
-            <p className="text-xs">
+            <p className='text-xs'>
               {currency ? formatCurrency(tooltipData.y) : tooltipData.y}{' '}
               {totalExpenses
                 ? `(${new Intl.NumberFormat('en-US', {
-                    style: 'percent'
-                  }).format(tooltipData.percentage)})`
+                  style: 'percent'
+                }).format(tooltipData.percentage)})`
                 : ''}
             </p>
           </div>

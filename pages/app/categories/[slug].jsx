@@ -56,12 +56,12 @@ export default function CategoryDetail() {
 
   return (
     <>
-      <div className="w-full pb-10 max-w-screen-3xl mx-auto mt-[63px]">
+      <div className='w-full pb-10 max-w-screen-3xl mx-auto mt-[63px]'>
         <Head>
           <title>Expense Drop - {currentCategory?.name}</title>
         </Head>
-        <header className="flex flex-col items-center justify-center px-4 lg:px-0">
-          <h1 className="text-lg 2xl:text-2xl capitalize font-bold mb-6">
+        <header className='flex flex-col items-center justify-center px-4 lg:px-0'>
+          <h1 className='text-lg 2xl:text-2xl capitalize font-bold mb-6'>
             {slug.split('-').join(' ')}
           </h1>
           <HeaderStats
@@ -70,8 +70,8 @@ export default function CategoryDetail() {
             transactionsQuantity={currentCategory?.transactions.length}
           />
         </header>
-        <div className="space-y-20 mt-10">
-          <SectionWrapper sectionLabel="By Account" detailPage>
+        <div className='space-y-20 mt-10'>
+          <SectionWrapper sectionLabel='By Account' detailPage>
             <BarChartCard
               data={byAccounts.map((account) => ({
                 x: account.name,
@@ -106,11 +106,11 @@ export default function CategoryDetail() {
               spendingTrend
             />
           </SectionWrapper>
-          <section className="lg:px-4">
+          <section className='lg:px-4'>
             <ExpensesList
               label={currentCategory?.name}
               expenses={formatArray(currentCategory?.transactions)}
-              page="categories"
+              page='categories'
             />
           </section>
         </div>

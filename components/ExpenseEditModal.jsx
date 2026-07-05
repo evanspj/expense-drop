@@ -71,53 +71,54 @@ export default function ExpenseEditModal() {
           as={motion.div}
           static
           open
-          key="download-modal"
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
-          className="fixed inset-0 flex justify-end p-4 z-40 overflow-y-auto"
+          key='download-modal'
+          initial='hidden'
+          animate='visible'
+          exit='hidden'
+          className='fixed inset-0 flex justify-end p-4 z-40 overflow-y-auto'
           onClose={closeModal}
         >
           <Dialog.Overlay
             as={motion.div}
             variants={overlayVariants}
-            className="fixed inset-0 firefox:bg-black/50 bg-black/20 backdrop-blur-sm"
+            className='fixed inset-0 firefox:bg-black/50 bg-black/20 backdrop-blur-sm'
           />
           <motion.div variants={sideModalVariants}>
-            <Form className="inline-block w-full md:min-w-[450px] max-w-md text-left align-middle transition-all transform bg-white shadow-xl rounded-lg">
-              <div className="px-6 pt-6 md:px-8 md:pt-8">
-                <Dialog.Title className="font-bold text-xl 3xl:text-2xl mb-4">
+            <Form
+              className='inline-block w-full md:min-w-[450px] max-w-md text-left align-middle transition-all transform bg-white shadow-xl rounded-lg'>
+              <div className='px-6 pt-6 md:px-8 md:pt-8'>
+                <Dialog.Title className='font-bold text-xl 3xl:text-2xl mb-4'>
                   Edit Transaction
                 </Dialog.Title>
-                <div className="space-y-4 my-6 md:my-8">
-                  <TextInput field="description" label="Description" />
+                <div className='space-y-4 my-6 md:my-8'>
+                  <TextInput field='description' label='Description' />
                   <NumberInput
-                    field="amount"
-                    label="Amount (Required)"
-                    step="0.01"
+                    field='amount'
+                    label='Amount (Required)'
+                    step='0.01'
                     validate={(value) =>
                       !value ? 'Expense Amount is required.' : null
                     }
                   />
-                  <TextInput field="account" label="Account" />
-                  <TextInput field="category" label="Category" />
+                  <TextInput field='account' label='Account' />
+                  <TextInput field='category' label='Category' />
                   <TextInput
-                    field="date"
-                    label="Date (Required)"
+                    field='date'
+                    label='Date (Required)'
                     validate={(value) => (!value ? 'Date is required.' : null)}
                   />
                 </div>
               </div>
-              <div className="flex justify-end">
+              <div className='flex justify-end'>
                 <button
-                  className="w-full h-14 bg-gray-200 text-xs 3xl:text-sm font-medium hover:bg-gray-300 rounded-bl-lg"
+                  className='w-full h-14 bg-gray-200 text-xs 3xl:text-sm font-medium hover:bg-gray-300 rounded-bl-lg'
                   onClick={closeModal}
                 >
                   Cancel
                 </button>
                 <button
-                  className="w-full h-14 bg-gray-800 text-xs 3xl:text-sm font-medium text-white hover:bg-gray-700 rounded-br-lg"
-                  type="submit"
+                  className='w-full h-14 bg-gray-800 text-xs 3xl:text-sm font-medium text-white hover:bg-gray-700 rounded-br-lg'
+                  type='submit'
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Saving...' : 'Save'}

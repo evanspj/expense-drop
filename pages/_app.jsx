@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return getLayout(
     <>
       <Toaster
-        position="top-right"
+        position='top-right'
         toastOptions={{
           duration: 2500,
           style: {

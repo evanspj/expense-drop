@@ -49,12 +49,12 @@ export default function AccountDetail() {
   }
 
   return (
-    <div className="w-full pb-10 max-w-screen-3xl mx-auto mt-[63px]">
+    <div className='w-full pb-10 max-w-screen-3xl mx-auto mt-[63px]'>
       <Head>
         <title>Expense Drop - {currentAccount?.name}</title>
       </Head>
-      <header className="flex flex-col items-center justify-center">
-        <h1 className="text-lg 2xl:text-2xl capitalize font-bold mb-6">
+      <header className='flex flex-col items-center justify-center'>
+        <h1 className='text-lg 2xl:text-2xl capitalize font-bold mb-6'>
           {slug.split('-').join(' ')}
         </h1>
         <HeaderStats
@@ -63,7 +63,7 @@ export default function AccountDetail() {
           transactionsQuantity={currentAccount?.transactions.length}
         />
       </header>
-      <div className="space-y-20 mt-10">
+      <div className='space-y-20 mt-10'>
         <SectionWrapper
           sectionLabel={<ByMonthLabel monthlyAverage={monthlyAverage} />}
           detailPage
@@ -83,7 +83,7 @@ export default function AccountDetail() {
             spendingTrend
           />
         </SectionWrapper>
-        <SectionWrapper sectionLabel="By Category" detailPage>
+        <SectionWrapper sectionLabel='By Category' detailPage>
           <BarChartCard
             data={byCategories.map((category) => ({
               x: category.name,
@@ -99,11 +99,11 @@ export default function AccountDetail() {
             totalSum={currentAccount.sum}
           />
         </SectionWrapper>
-        <section className="lg:px-4">
+        <section className='lg:px-4'>
           <ExpensesList
             label={currentAccount?.name}
             expenses={formatArray(currentAccount?.transactions)}
-            page="accounts"
+            page='accounts'
           />
         </section>
       </div>

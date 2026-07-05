@@ -26,7 +26,7 @@ export default function Tooltip({
         onMouseLeave={() => setIsVisible(false)}
         onFocus={() => setIsVisible(true)}
         onBlur={() => setIsVisible(false)}
-        className="flex items-center"
+        className='flex items-center'
         ref={reference}
       >
         {children}

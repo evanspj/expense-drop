@@ -10,7 +10,7 @@ export default function Transactions() {
   const { transactions } = useSnapshot(state);
 
   return (
-    <div className="w-full max-w-screen-3xl lg:px-4 mx-auto mt-[63px]">
+    <div className='w-full max-w-screen-3xl lg:px-4 mx-auto mt-[63px]'>
       <Head>
         <title>Expense Drop - Transactions</title>
       </Head>

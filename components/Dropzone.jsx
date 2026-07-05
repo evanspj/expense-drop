@@ -106,36 +106,37 @@ export default function Dropzone({ addTransactions = false, callback }) {
     : 'Drag and drop a properly formatted excel file here, or click to select a file.';
 
   return (
-    <div className="w-full h-full flex justify-center">
+    <div className='w-full h-full flex justify-center'>
       <div
-        className="w-full h-full flex justify-center items-center text-sm 3xl:text-base text-center bg-gray-50 border-2 border-dashed border-gray-400 rounded-lg text-gray-400 hover:border-gray-500 hover:text-gray-700 p-4 cursor-pointer"
+        className='w-full h-full flex justify-center items-center text-sm 3xl:text-base text-center bg-gray-50 border-2 border-dashed border-gray-400 rounded-lg text-gray-400 hover:border-gray-500 hover:text-gray-700 p-4 cursor-pointer'
         {...getRootProps()}
       >
         <input
-          className="focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+          className='focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2'
           {...getInputProps()}
         />
         {isLoading ? (
           <p>Processing transactions...</p>
         ) : (
-          <div className="space-y-4">
+          <div className='space-y-4'>
             <svg
-              className="w-8 h-8 mx-auto"
-              viewBox="0 0 16 16"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-labelledby="file-icon"
+              className='w-8 h-8 mx-auto'
+              viewBox='0 0 16 16'
+              fill='currentColor'
+              xmlns='http://www.w3.org/2000/svg'
+              role='img'
+              aria-labelledby='file-icon'
             >
-              <title id="file-icon">Click or Drop File</title>
+              <title id='file-icon'>Click or Drop File</title>
               <path
-                fillRule="evenodd"
-                d="M5 9H3V8h10v1H6v2h7v1H6v2H5v-2H3v-1h2V9z"
+                fillRule='evenodd'
+                d='M5 9H3V8h10v1H6v2h7v1H6v2H5v-2H3v-1h2V9z'
               />
-              <path d="M4 1h5v1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6h1v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2z" />
-              <path d="M9 4.5V1l5 5h-3.5A1.5 1.5 0 0 1 9 4.5z" />
+              <path
+                d='M4 1h5v1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6h1v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2z' />
+              <path d='M9 4.5V1l5 5h-3.5A1.5 1.5 0 0 1 9 4.5z' />
             </svg>
-            <p className="w-full lg:w-3/5 mx-auto text-xs 3xl:text-sm font-medium">
+            <p className='w-full lg:w-3/5 mx-auto text-xs 3xl:text-sm font-medium'>
               {uploadLabel}
             </p>
           </div>
@@ -143,71 +144,73 @@ export default function Dropzone({ addTransactions = false, callback }) {
       </div>
       <Transition show={isOpen} as={Fragment}>
         <Dialog
-          as="div"
+          as='div'
           onClose={closeModal}
-          className="fixed inset-0 z-10 overflow-y-auto"
+          className='fixed inset-0 z-10 overflow-y-auto'
         >
-          <div className="flex justify-center items-center min-h-screen px-4 text-center">
+          <div className='flex justify-center items-center min-h-screen px-4 text-center'>
             <Transition.Child
               as={Fragment}
-              enter="ease-out duration-300"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="ease-in duration-200"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
+              enter='ease-out duration-300'
+              enterFrom='opacity-0'
+              enterTo='opacity-100'
+              leave='ease-in duration-200'
+              leaveFrom='opacity-100'
+              leaveTo='opacity-0'
             >
-              <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-10" />
+              <Dialog.Overlay className='fixed inset-0 bg-black bg-opacity-10' />
             </Transition.Child>
             <Transition.Child
               as={Fragment}
-              enter="ease-out duration-300"
-              enterFrom="opacity-0 scale-95"
-              enterTo="opacity-100 scale-100"
-              leave="ease-in duration-200"
-              leaveFrom="opacity-100 scale-100"
-              leaveTo="opacity-0 scale-95"
+              enter='ease-out duration-300'
+              enterFrom='opacity-0 scale-95'
+              enterTo='opacity-100 scale-100'
+              leave='ease-in duration-200'
+              leaveFrom='opacity-100 scale-100'
+              leaveTo='opacity-0 scale-95'
             >
-              <div className="relative inline-block w-full max-w-lg p-6 overflow-hidden text-left align-middle transition-all transform bg-white border-2 border-red-500 shadow-xl rounded-xl">
+              <div
+                className='relative inline-block w-full max-w-lg p-6 overflow-hidden text-left align-middle transition-all transform bg-white border-2 border-red-500 shadow-xl rounded-xl'>
                 <Dialog.Title
-                  as="h3"
-                  className="text-lg font-medium leading-6 text-red-500"
+                  as='h3'
+                  className='text-lg font-medium leading-6 text-red-500'
                 >
                   Error Processing the XLSX File
                 </Dialog.Title>
-                <div className="mt-4">
-                  <p className="text-sm text-gray-500">
+                <div className='mt-4'>
+                  <p className='text-sm text-gray-500'>
                     There were {errors?.length || 0} errors with the file.
                     Please fix the below errors before being able to upload it.
                   </p>
                   {errors && (
-                    <ul className="max-h-[400px] list-disc list-inside text-sm text-gray-600 space-y-1 mt-4 overflow-y-scroll">
+                    <ul
+                      className='max-h-[400px] list-disc list-inside text-sm text-gray-600 space-y-1 mt-4 overflow-y-scroll'>
                       {errors.map((error) => (
                         <li key={error.msg}>{error.msg}</li>
                       ))}
                     </ul>
                   )}
                 </div>
-                <div className="absolute top-4 right-4 ">
+                <div className='absolute top-4 right-4 '>
                   <button
-                    type="button"
-                    className="inline-flex justify-center p-2 text-sm font-medium text-black bg-gray-200 rounded-full hover:bg-gray-300"
+                    type='button'
+                    className='inline-flex justify-center p-2 text-sm font-medium text-black bg-gray-200 rounded-full hover:bg-gray-300'
                     onClick={closeModal}
                   >
                     <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 15 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-labelledby="close-dialog-icon"
+                      width='15'
+                      height='15'
+                      viewBox='0 0 15 15'
+                      fill='none'
+                      xmlns='http://www.w3.org/2000/svg'
+                      aria-labelledby='close-dialog-icon'
                     >
-                      <title id="close-dialog-icon">Close Dialog</title>
+                      <title id='close-dialog-icon'>Close Dialog</title>
                       <path
-                        d="M12.8536 2.85355C13.0488 2.65829 13.0488 2.34171 12.8536 2.14645C12.6583 1.95118 12.3417 1.95118 12.1464 2.14645L7.5 6.79289L2.85355 2.14645C2.65829 1.95118 2.34171 1.95118 2.14645 2.14645C1.95118 2.34171 1.95118 2.65829 2.14645 2.85355L6.79289 7.5L2.14645 12.1464C1.95118 12.3417 1.95118 12.6583 2.14645 12.8536C2.34171 13.0488 2.65829 13.0488 2.85355 12.8536L7.5 8.20711L12.1464 12.8536C12.3417 13.0488 12.6583 13.0488 12.8536 12.8536C13.0488 12.6583 13.0488 12.3417 12.8536 12.1464L8.20711 7.5L12.8536 2.85355Z"
-                        fill="currentColor"
-                        fillRule="evenodd"
-                        clipRule="evenodd"
+                        d='M12.8536 2.85355C13.0488 2.65829 13.0488 2.34171 12.8536 2.14645C12.6583 1.95118 12.3417 1.95118 12.1464 2.14645L7.5 6.79289L2.85355 2.14645C2.65829 1.95118 2.34171 1.95118 2.14645 2.14645C1.95118 2.34171 1.95118 2.65829 2.14645 2.85355L6.79289 7.5L2.14645 12.1464C1.95118 12.3417 1.95118 12.6583 2.14645 12.8536C2.34171 13.0488 2.65829 13.0488 2.85355 12.8536L7.5 8.20711L12.1464 12.8536C12.3417 13.0488 12.6583 13.0488 12.8536 12.8536C13.0488 12.6583 13.0488 12.3417 12.8536 12.1464L8.20711 7.5L12.8536 2.85355Z'
+                        fill='currentColor'
+                        fillRule='evenodd'
+                        clipRule='evenodd'
                       ></path>
                     </svg>
                   </button>

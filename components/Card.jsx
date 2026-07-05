@@ -30,17 +30,17 @@ export default function Card({
         link ? '' : 'border border-gray-200'
       } space-y-4 shadow-xl shadow-gray-500/10 print:shadow-none transition duration-300 ease-in-out py-4 px-5 overflow-hidden`}
     >
-      <p className="font-bold">{name}</p>
-      <div className="flex items-end justify-between">
-        <p className="inline-block">
+      <p className='font-bold'>{name}</p>
+      <div className='flex items-end justify-between'>
+        <p className='inline-block'>
           {new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: 'USD'
           }).format(sum)}
         </p>
         {percentage && (
-          <Tooltip dark label="% of Total Expenses">
-            <p className="text-xs  text-cyan-500 border border-cyan-300 bg-cyan-50  rounded px-1">
+          <Tooltip dark label='% of Total Expenses'>
+            <p className='text-xs  text-cyan-500 border border-cyan-300 bg-cyan-50  rounded px-1'>
               {new Intl.NumberFormat('en-US', { style: 'percent' }).format(
                 percentage
               )}
@@ -48,12 +48,12 @@ export default function Card({
           </Tooltip>
         )}
         {index && index !== 0 ? (
-          <Tooltip dark label="% Change from Previous Month (MoM)">
+          <Tooltip dark label='% Change from Previous Month (MoM)'>
             <div className={spendingTrendContainer}>
-              <span className="flex justify-center items-center">
+              <span className='flex justify-center items-center'>
                 <TrendSign spendingTrend={percentageValue} />
               </span>
-              <p className="text-xs font-medium">
+              <p className='text-xs font-medium'>
                 {new Intl.NumberFormat('en-US', {
                   style: 'percent',
                   signDisplay: 'never'
@@ -68,7 +68,8 @@ export default function Card({
 
   if (link) {
     return (
-      <Link href={link} className="w-full block focus:outline-none border border-gray-200 hover:border-black rounded-xl">
+      <Link href={link}
+            className='w-full block focus:outline-none border border-gray-200 hover:border-black rounded-xl'>
         <CardContent />
       </Link>
     );

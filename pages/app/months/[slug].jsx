@@ -46,12 +46,12 @@ export default function MonthDetail() {
   }
 
   return (
-    <div className="w-full pb-10 max-w-screen-3xl mx-auto mt-[63px]">
+    <div className='w-full pb-10 max-w-screen-3xl mx-auto mt-[63px]'>
       <Head>
         <title>Expense Drop - {setMonth(currentMonth?.name)}</title>
       </Head>
-      <header className="flex flex-col items-center justify-center px-4 lg:px-0">
-        <h1 className="text-lg 2xl:text-2xl capitalize font-bold mb-6">
+      <header className='flex flex-col items-center justify-center px-4 lg:px-0'>
+        <h1 className='text-lg 2xl:text-2xl capitalize font-bold mb-6'>
           {setMonth(slug)}
         </h1>
         <HeaderStats
@@ -61,8 +61,8 @@ export default function MonthDetail() {
           spendingTrend={calcSpendingTrend(currentMonth.index, months)}
         />
       </header>
-      <div className="space-y-20 mt-10">
-        <SectionWrapper sectionLabel="By Account" detailPage>
+      <div className='space-y-20 mt-10'>
+        <SectionWrapper sectionLabel='By Account' detailPage>
           <BarChartCard
             data={byAccounts.map((account) => ({
               x: account.name,
@@ -78,7 +78,7 @@ export default function MonthDetail() {
             totalSum={currentMonth.sum}
           />
         </SectionWrapper>
-        <SectionWrapper sectionLabel="By Category" detailPage>
+        <SectionWrapper sectionLabel='By Category' detailPage>
           <BarChartCard
             data={byCategories.map((category) => ({
               x: category.name,
@@ -94,7 +94,7 @@ export default function MonthDetail() {
             totalSum={currentMonth.sum}
           />
         </SectionWrapper>
-        <section className="lg:px-4">
+        <section className='lg:px-4'>
           <ExpensesList
             label={setMonth(currentMonth?.name)}
             expenses={formatArray(currentMonth?.transactions)}

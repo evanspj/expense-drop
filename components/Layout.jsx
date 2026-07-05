@@ -5,6 +5,7 @@ import { state } from '@store';
 import { useSnapshot } from 'valtio';
 
 import Nav from './Nav';
+
 const SessionModal = dynamic(() => import('./SessionModal'));
 const NewSessionModal = dynamic(() => import('./NewSessionModal'));
 const AddTransactionsModal = dynamic(() => import('./AddTransactionsModal'));

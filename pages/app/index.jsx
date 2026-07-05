@@ -21,19 +21,19 @@ export default function Dashboard() {
   } = useSnapshot(state);
 
   return (
-    <div className="relative flex-grow pb-10 mt-[63px] print:mt-0 max-w-screen-3xl mx-auto">
+    <div className='relative flex-grow pb-10 mt-[63px] print:mt-0 max-w-screen-3xl mx-auto'>
       <Head>
         <title>Expense Drop - Dashboard</title>
       </Head>
-      <header className="flex justify-center px-4 lg:px-0">
+      <header className='flex justify-center px-4 lg:px-0'>
         <HeaderStats
           transactions={formatArray(transactions)}
           totalExpenses={totalExpenses}
           transactionsQuantity={transactions.length}
         />
       </header>
-      <div className="space-y-20 mt-10">
-        <SectionWrapper sectionLabel="By Account">
+      <div className='space-y-20 mt-10'>
+        <SectionWrapper sectionLabel='By Account'>
           <BarChartCard
             data={accounts.map((account) => ({
               x: account.name,
@@ -46,7 +46,7 @@ export default function Dashboard() {
             percentage
             totalSum={totalExpenses}
             link
-            type="account"
+            type='account'
           />
         </SectionWrapper>
         <SectionWrapper
@@ -64,10 +64,10 @@ export default function Dashboard() {
             cardWidth={225}
             link
             spendingTrend
-            type="month"
+            type='month'
           />
         </SectionWrapper>
-        <SectionWrapper sectionLabel="By Category">
+        <SectionWrapper sectionLabel='By Category'>
           <BarChartCard
             data={categories.map((category) => ({
               x: category.name,
@@ -80,7 +80,7 @@ export default function Dashboard() {
             percentage
             totalSum={totalExpenses}
             link
-            type="category"
+            type='category'
           />
         </SectionWrapper>
       </div>

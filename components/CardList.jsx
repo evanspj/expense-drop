@@ -43,7 +43,7 @@ export default function CardList({
     return (
       <ul className={containerClasses}>
         {[...Array(3).keys()].map((i) => (
-          <li key={i} className="h-40 rounded-xl bg-gray-100 animate-pulse" />
+          <li key={i} className='h-40 rounded-xl bg-gray-100 animate-pulse' />
         ))}
       </ul>
     );

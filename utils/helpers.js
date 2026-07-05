@@ -66,9 +66,15 @@ export const formatDefaultTransactions = (transactions) => {
         errs.push({ msg: `Transaction on row ${i + 2} is missing a date value.` });
       }
     }
-    if (!row.Category) { row.Category = 'Uncategorized'; }
-    if (!row.Description) { row.Description = ''; }
-    if (!row.Account) { row.Account = 'No Account'; }
+    if (!row.Category) {
+      row.Category = 'Uncategorized';
+    }
+    if (!row.Description) {
+      row.Description = '';
+    }
+    if (!row.Account) {
+      row.Account = 'No Account';
+    }
   });
   return { errors: errs, transactions };
 };

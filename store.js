@@ -13,7 +13,7 @@ export const state = proxy({
   newSessionModal: false,
   editModal: false,
   bulkEditModal: false,
-  downloadModal: false,
+  downloadModal: false
 });
 
 derive({
