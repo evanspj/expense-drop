@@ -102,7 +102,7 @@ export default function BarChart({
               tickFormat={formatNumber}
             />
           )}
-          <LinearGradient id='bar-bg' from='#6366F1' to='#8B5CF6' />
+          <LinearGradient id='bar-bg' from='oklch(58.5% 0.233 277.117)' to='oklch(45.7% 0.24 277.023)' />
           {data.map((d) => {
             const xLabel = getX(d);
             const barWidth = xScale.bandwidth();
