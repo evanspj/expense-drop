@@ -14,20 +14,10 @@ import transactionsPreviewImage from '@images/transactions_preview-optimized.png
 import Dropzone from '@components/Dropzone';
 import SavedSessionsModal from '@components/SavedSessionsModal';
 
-/**
- *
- * Highlight Component
- *
- **/
 function Highlight({ children }) {
   return <span className="text-black">{children}</span>;
 }
 
-/**
- *
- * Featured Card Component
- *
- **/
 function FeatureCard({ label, icon, description }) {
   return (
     <li className="">
@@ -40,11 +30,6 @@ function FeatureCard({ label, icon, description }) {
   );
 }
 
-/**
- *
- * File Header Component
- *
- **/
 function FileHeader({ name, description, required }) {
   return (
     <div className="grid grid-cols-4 space-x-6">
@@ -66,11 +51,6 @@ function FileHeader({ name, description, required }) {
   );
 }
 
-/**
- *
- * FAQ Item Component
- *
- **/
 function FAQItem({ question, first, last, children }) {
   return (
     <Disclosure>
@@ -109,12 +89,6 @@ function FAQItem({ question, first, last, children }) {
     </Disclosure>
   );
 }
-
-/**
- *
- * Icon Components
- *
- **/
 
 function OrganizeIcon() {
   return (
@@ -276,11 +250,6 @@ function EditIcon() {
   );
 }
 
-/**
- *
- * Mobile Nav Component
- *
- **/
 function MobileNav({ isLoadingSessions, sessions, setIsSavedSessionsOpen }) {
   return (
     <nav className="lg:hidden w-full sticky top-0 left-0 right-0 flex justify-end items-center py-3 z-30">
@@ -415,11 +384,6 @@ function MobileNav({ isLoadingSessions, sessions, setIsSavedSessionsOpen }) {
   );
 }
 
-/**
- *
- * Save Session Button Component
- *
- **/
 function SavedSessionsButton({ hasSessions, openModal, large }) {
   if (!hasSessions) return null;
 
@@ -437,11 +401,6 @@ function SavedSessionsButton({ hasSessions, openModal, large }) {
   );
 }
 
-/**
- *
- * Desktop Nav Link Component
- *
- **/
 function DesktopNavLink({ href, children }) {
   return (
     <a
@@ -487,9 +446,12 @@ export default function LandingPage() {
   useEffect(() => {
     if (transactions?.length) {
       router.push('/app');
-      return;
     }
   }, [transactions]);
+
+  useEffect(() => {
+    fetchSessions();
+  }, []);
 
   return (
     <main className="bg-white px-6 lg:px-10 2xl:px-0">
