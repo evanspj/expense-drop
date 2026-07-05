@@ -1,7 +1,7 @@
 import Dexie from 'dexie';
 import { proxy } from 'valtio';
 import { derive } from 'valtio/utils';
-import { amountReducer, getTransactions, sortDateDesc, encryptData } from './utils/helpers';
+import { amountReducer, getTransactions, sortDateDesc, encryptData } from '@utils/helpers';
 
 export const state = proxy({
   transactions: [],
