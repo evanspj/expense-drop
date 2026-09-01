@@ -3,7 +3,12 @@ allowBuilds:
   unrs-resolver: true
 minimumReleaseAgeExclude:
   - minimatch@9.0.6 || 9.0.7
-  - postcss@8.5.10
+  - postcss@8.5.10 || 8.5.18 || 8.5.23
+  - brace-expansion@1.1.16 || 1.1.17 || 1.1.18 || 2.1.2 || 2.1.3 || 2.1.4
+  - sharp@0.35.0
+  - next@16.2.11
+  - js-yaml@4.3.1
+  - nanoid@3.3.16 || 3.3.18
 overrides:
   minimatch@>=9.0.0 <9.0.6: ^9.0.6
   minimatch@>=9.0.0 <9.0.7: ^9.0.7
